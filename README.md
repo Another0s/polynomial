@@ -16,7 +16,7 @@ Polynomial.add(a, b) # Polynomial.new([5, 7, 9, 7])
 ```Elixir
 a = Polynomial.new([4, 5, 6, 7])
 b = Polynomial.new([1, 2, 3])
-assert Polynomial.sub(a, b) == Polynomial.new([3, 3, 3, 7])
+Polynomial.sub(a, b) # Polynomial.new([3, 3, 3, 7])
 ```
 
 **Multiply by the degree of the polynomial:**
