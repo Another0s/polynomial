@@ -20,7 +20,7 @@ defmodule PolynomialTest do
 
   test "Pow Polynomial" do
     a = Polynomial.new([1, 2, 3])
-    assert Polynomial.pow(a, 2) == Polynomial.new([0, 0, 1, 2, 3])
+    assert Polynomial.pow(a, 2) == Polynomial.mul(a, a)
   end
 
   test "Mul two Polynomials" do
@@ -29,4 +29,14 @@ defmodule PolynomialTest do
     assert Polynomial.mul(a, b) == Polynomial.new([3, 10, 8])
   end
 
+  test "Deg of Polynomial" do
+    a = Polynomial.new([0, 1, 2, 3, 0])
+    assert Polynomial.deg(a) == 4
+  end
+
+  test "Sub two Polynomials" do
+    a = Polynomial.new([4, 5, 6, 7])
+    b = Polynomial.new([1, 2, 3])
+    assert Polynomial.sub(a, b) == Polynomial.new([3, 3, 3, 7])
+  end
 end
